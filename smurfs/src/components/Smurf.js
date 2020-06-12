@@ -12,7 +12,16 @@ let Smurf = props => {
 
     let remove = () => {
 
-        
+        axios.delete('http://localhost:3333/smurfs/' + smurf.id).then(response => {
+
+            console.log('axios DEL response', response.data);
+
+            setSmurfs(response.data);
+
+        }).catch(error => {
+
+            console.log('axios DEL err: ', error);
+        });
         
     }
     
