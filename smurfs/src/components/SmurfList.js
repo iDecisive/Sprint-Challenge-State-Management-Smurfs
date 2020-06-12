@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 
 import SmurfListContext from '../contexts/SmurfListContext';
 
+import Smurf from './Smurf'
+
 let SmurfList = () => {
 
     let {smurfs} = useContext(SmurfListContext);
@@ -14,7 +16,11 @@ let SmurfList = () => {
 
             <h2>Smurf List</h2>
 
-            {smurfs[0].name}
+            {smurfs.map((item, index) => {
+
+            return <Smurf smurf={item} index={index} key={index}/>
+
+            })}
 
         </div>
     )
