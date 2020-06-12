@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import SmurfListContext from '../contexts/SmurfListContext';
 
 import SmurfList from './SmurfList';
+import AddSmurf from './AddSmurf';
 
 import axios from 'axios';
 
@@ -41,6 +42,8 @@ let App = () => {
           <div>Welcome to your state management version of Smurfs!</div>
           <div>Start inside of your `src/index.js` file!</div>
           <div>Have fun!</div>
+
+          <AddSmurf />
 
           <SmurfList />
 

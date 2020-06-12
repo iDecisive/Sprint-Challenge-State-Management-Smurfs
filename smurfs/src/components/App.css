@@ -41,3 +41,25 @@ body {
   outline: none;
 
 }
+
+.create-smurf form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+.create-smurf form input {
+
+  margin-bottom: 10px;
+
+}
+
+.create-smurf form button {
+
+  width: 50%;
+
+}
