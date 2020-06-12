@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import SmurfListContext from '../contexts/SmurfListContext';
+
+import axios from 'axios';
 
 import "./App.css";
 
@@ -15,6 +17,18 @@ let App = () => {
     }
 
   ]);
+
+  useEffect(() => {
+
+    axios.get('http://localhost:3333/smurfs').then(response => {
+
+      console.log('axios get:', response.data);
+
+      setSmurfs(response.data);
+    
+      }).catch();
+
+  },[]);
 
     return (
 
